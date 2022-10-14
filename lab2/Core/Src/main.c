@@ -326,21 +326,22 @@ void update7SEG(int index){
 	HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
 	HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET);
 	HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET);
+	//bieu dien so lay tu buffer tren led
 	display7seg(led_buffer[index]);
 	switch(index){
-			  case 0:
+			  case 0://display on first led
 				  	 HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, RESET);
 
 				  	 break;
-			  case 1:
+			  case 1://display on second led
 			  		 HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, RESET);
 
 			  		 break;
-			  case 2:
+			  case 2://display on third led
 			  		 HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, RESET);
 
 			  		 break;
-			  case 3:
+			  case 3://display on last led
 			  		 HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, RESET);
 
 			  		 break;
